@@ -76,6 +76,18 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 export function DrowerBanner() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  const CategoryList =[
+    "املاک",
+    "وسایل نقلیه",
+    "کالای دیجیتال",
+    "خاناشپزخانه",
+    "حدمات",
+    "وسایل شخصی",
+    "سرگرمی و فراقت",
+    "اجتمایی",
+    "تجهیزاتو صنعتی",
+    "استخدام و کاریابی"
+  ]
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -120,7 +132,7 @@ export function DrowerBanner() {
           دسته بندی
         </DrawerHeader>
         <List>
-          {["املاک", "وسایل نقلیه", "کالای دیجیتال", "خاناشپزخانه", "حدمات", "وسایل شخصی", "سرگرمی و فراقت", "اجتمایی", "تجهیزاتو صنعتی", "استخدام و کاریابی"].map((text, index) => (
+          {CategoryList.map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>

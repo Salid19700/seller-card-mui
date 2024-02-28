@@ -1,17 +1,18 @@
-import * as React from "react";
-import CssBaseline from "@mui/material/CssBaseline";
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import { Bar } from './Components/Bar';
+import React, { Component } from "react";
+import { Bar } from "./Components/Bar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { PublishPage } from "./Components/pages/PublishPage";
+
+
 
 function App() {
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <Container maxWidth="xl">
-        <Bar/>
-      </Container>
-    </React.Fragment>
+    <BrowserRouter>
+      <Routes>
+      <Route exact path="/" Component={Bar}/>
+      <Route path="/Publisher" Component={PublishPage}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
