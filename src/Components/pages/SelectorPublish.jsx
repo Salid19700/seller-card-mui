@@ -8,16 +8,46 @@ import Select from '@mui/material/Select';
 export function SelectorPublish() {
   const [age, setAge] = React.useState('');
   const CategoryList =[
-    "املاک",
-    "وسایل نقلیه",
-    "کالای دیجیتال",
-    "خاناشپزخانه",
-    "حدمات",
-    "وسایل شخصی",
-    "سرگرمی و فراقت",
-    "اجتمایی",
-    "تجهیزاتو صنعتی",
-    "استخدام و کاریابی"
+    {
+      namee: "املاک",
+      id: 1
+    },
+    {
+      namee: "وسایل نقلیه",
+      id: 2
+    },
+    {
+      namee: "کالای دیجیتال",
+      id: 3
+    },
+    {
+      namee: "خاناشپزخانه",
+      id: 4
+    },
+    {
+      namee: "حدمات",
+      id: 5
+    },
+    {
+      namee: "وسایل شخصی",
+      id: 6
+    },
+    {
+      namee: "سرگرمی و فراقت",
+      id: 7
+    },
+    {
+      namee: "اجتمایی",
+      id: 8
+    },
+    {
+      namee: "تجهیزاتو صنعتی",
+      id: 9
+    },
+    {
+      namee: "استخدام و کاریابی",
+      id: 10
+    },
   ]
   const handleChange = (event) => {
     setAge(event.target.value);
@@ -34,8 +64,8 @@ export function SelectorPublish() {
           label="Category"
           onChange={handleChange}
         >
-            {CategoryList.map((text,index)=>{
-                return <MenuItem key={text}>{text}</MenuItem>
+            {CategoryList.map((item)=>{
+                return <MenuItem key={item.id} value={item.namee}>{item.namee}</MenuItem>
             }
             )}
 
