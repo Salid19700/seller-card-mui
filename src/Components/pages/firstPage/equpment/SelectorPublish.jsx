@@ -51,6 +51,7 @@ export function SelectorPublish() {
   ]
   const handleChange = (event) => {
     setAge(event.target.value);
+    console.log(age)
   };
 
   return (
@@ -65,6 +66,7 @@ export function SelectorPublish() {
           onChange={handleChange}
         >
             {CategoryList.map((item)=>{
+              
                 return <MenuItem key={item.id} value={item.namee}>{item.namee}</MenuItem>
             }
             )}

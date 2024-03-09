@@ -28,7 +28,7 @@ export function PublishPage() {
         width={500}
         my={4}
         display="flex"
-        margin=" 40px auto"
+        margin=" -30px auto"
         flexWrap="wrap"
         gap={1}
         p={2}
@@ -53,12 +53,11 @@ export function PublishPage() {
             <SelectorPublish />
           </Grid>
           <Grid item xs={8}>
-            <Link to='/'><ButtonPublish/></Link>
+            <Link to='/'><ButtonPublish /></Link>
           </Grid>
           <Grid>
           <Button variant="outlined">Publishing</Button>
           </Grid>
-
         </Grid>
       </Box>
     </>

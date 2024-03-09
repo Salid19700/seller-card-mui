@@ -12,6 +12,7 @@ import { Logo } from "./Logo";
 import { ModalCity } from "./Modal";
 import { DrowerBanner } from "./Drower";
 import { Link } from "react-router-dom";
+import { PublishPage } from "./PublishPage";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -41,7 +42,7 @@ export function Bar() {
     <React.Fragment>
       <CssBaseline />
       <Container>
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1, marginBottom: 15}}>
           <AppBar position="fixed" color="secondary">
             <Toolbar>
               <Logo />
@@ -49,7 +50,7 @@ export function Bar() {
                 <ModalCity />
               </Typography>
               <Button onClick={handelAd} color="inherit">
-                <Link to='/Publisher'>
+                <Link to='/poster'>
                   Publish Ad
                 </Link>
               </Button>
