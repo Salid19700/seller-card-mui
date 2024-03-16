@@ -8,7 +8,7 @@ export function Boxleft(props) {
       <CssBaseline />
       <Box
         height={500}
-        maxWidth={600}
+        maxWidth='50%'
         my={4}
         display="flex"
         alignItems="center"
@@ -16,7 +16,7 @@ export function Boxleft(props) {
 
         sx={{ border: "2px solid grey" }}
       >
-        <img src={props.image} alt="Loading" />
+        <img src={props.image} style={{display: 'block', width: '100%', height: '100%'}} alt="Loading" />
       </Box>
     </>
   );

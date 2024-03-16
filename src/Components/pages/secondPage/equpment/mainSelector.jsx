@@ -9,10 +9,10 @@ export function MainSelector(props) {
   const [cityName, setCityName] = useState("");
   const [holecity, setHoleCity] = useState("");
 
-  function provenceVisible(event){
-    setCityName(event.value.target);
+  const handleCityChange = (event) => {
+    props.setCity(event.target.value);
+  };
 
-  }
   function cityvisible(id) {
     setHoleCity(id);
   }
@@ -23,31 +23,19 @@ export function MainSelector(props) {
       id="demo-simple-select"
       value={cityName}
       label="Age"
-      onChange={provenceVisible}
+      onChange={handleCityChange}
     >
-      {/*
         {props.provence.map((item, index) => {
           return (
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={cityName}
-              label="Age"
-              onChange={setCityName}
-            >
+
               <MenuItem>
                 {item.map((inneritem, innerindex) => {
                   return <span>{inneritem}</span>;
                 })}
               </MenuItem>
-            </Select>
           );
         })}
-
-
-        
-    */}
-
+  
     {/* {      {props.citty[holecity].map((item, index) => {
         console.log(holecity);
         return (
@@ -58,6 +46,7 @@ export function MainSelector(props) {
           </MenuItem>
         );
       })}} */}
+    
     </Select>
   );
 }

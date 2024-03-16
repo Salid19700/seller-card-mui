@@ -5,15 +5,16 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { PosterItem } from "../../thirdPage/posteritem";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 
 export function MediaCard(props) {
+  let Id = props.Id;
   return (
     <>
-    <Link to="/poster/77">
+    <Link to={`/poster/${Id}`}> 
       <Card sx={{ maxWidth: 350 }}>
         <CardMedia
           sx={{ height: 140 }}

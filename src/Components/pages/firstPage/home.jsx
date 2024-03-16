@@ -1,13 +1,11 @@
-import { Bar } from "../firstPage/equpment/Bar";
-import { PublishPage } from "./equpment/PublishPage";
-
-
+import { Barr } from "./equipment/Bar";
+import { Poster } from "./poster";
 
 export function Home(){
     return(
     <>
-        <Bar />
-        <PublishPage />
+        <Barr />
+        <Poster />
     </>
     )
 }

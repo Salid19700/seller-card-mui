@@ -2,14 +2,15 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import AlternateEmailOutlinedIcon from "@mui/icons-material/AlternateEmailOutlined";
 import DriveFileRenameOutlineIcon from "@mui/icons-material/DriveFileRenameOutline";
-import { TextPublish } from "./TextPublish";
+import { TextPublish } from "./equpment/TextPublish";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-import { SelectorPublish } from "./SelectorPublish";
+import { SelectorPublish } from "./../firstPage/equipment/SelectorPublish";
 import { Link } from "react-router-dom";
-import { ButtonPublish } from "./ButtonPublish";
 import Button from '@mui/material/Button';
+import { ButtonPublish } from "./equpment/ButtonPublish";
+import { Barr } from "../firstPage/equipment/Bar";
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -21,8 +22,53 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export function PublishPage() {
+
+  const CategoryList =[
+    {
+      namee: "املاک",
+      id: 1
+    },
+    {
+      namee: "وسایل نقلیه",
+      id: 2
+    },
+    {
+      namee: "کالای دیجیتال",
+      id: 3
+    },
+    {
+      namee: "خاناشپزخانه",
+      id: 4
+    },
+    {
+      namee: "حدمات",
+      id: 5
+    },
+    {
+      namee: "وسایل شخصی",
+      id: 6
+    },
+    {
+      namee: "سرگرمی و فراقت",
+      id: 7
+    },
+    {
+      namee: "اجتمایی",
+      id: 8
+    },
+    {
+      namee: "تجهیزاتو صنعتی",
+      id: 9
+    },
+    {
+      namee: "استخدام و کاریابی",
+      id: 10
+    },
+  ]
+
   return (
     <>
+    <Barr />
       <Box
         height={600}
         width={500}
@@ -50,7 +96,7 @@ export function PublishPage() {
             added Description: <TextPublish lablel="Description" placeholder="hi" />
           </Grid>
           <Grid item xs={5}>
-            <SelectorPublish />
+            <SelectorPublish catList={CategoryList}/>
           </Grid>
           <Grid item xs={8}>
             <Link to='/'><ButtonPublish /></Link>
