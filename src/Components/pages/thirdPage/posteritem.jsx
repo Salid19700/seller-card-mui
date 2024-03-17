@@ -1,4 +1,4 @@
-import { Outlet, useParams } from "react-router-dom";
+import { Outlet, useParams, useRoutes } from "react-router-dom";
 import { Boxleft } from "./boxleft";
 import { Barr } from "../firstPage/equipment/Bar";
 import { BoxRight } from "./boxright";
@@ -64,12 +64,18 @@ const List = [
 ];
 
 export function PosterItem() {
+
+    const {id} = useParams();  
+    
   return (
     <>
       <Barr />
       <div style={{display: 'flex', flexWrap: 'nowrap', justifyContent: 'space-between'}}>
-      <BoxRight title="phone" />
-      <Boxleft image="https://placehold.co/600x800" />
+      {List[id].map((item)=>{
+
+      })}
+      <BoxRight title={List[id][2]} description={List[id][3]}/>
+      <Boxleft image={List[id][0]} />
       </div>
 
     </>
