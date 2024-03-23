@@ -9,7 +9,7 @@ import { MainSelector } from "../../secondPage/equpment/mainSelector";
 
 export function SelectorCity(props) {
   const [cityId, setCityId] = React.useState();
-  var hhhhh = props.cityId[cityId].filter((index)=> cityId === index);
+  const valueCity = {props.cityes.filter((item)=> item == cityId)}
 
   const handleCityChange = (event) => {
     props.setProv(event.target.value[0]);
@@ -50,10 +50,7 @@ export function SelectorCity(props) {
             label="Provence"
             onChange={handleCityChange}
           >
-            {/* {props.cityes[cityId].forEach((element, index) => {
-              return(<MenuItem key={index} value={element}>{element}</MenuItem>);
-            })} */}
-            {hhhhh.map((item, index)=>{
+            {valueCity.map((item, index)=>{
               return(<MenuItem key={index} value={item}>{item}</MenuItem>);
             })}
           </Select>
